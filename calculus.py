@@ -58,14 +58,14 @@ def interesting_calculus():
     """
     complete = False
     while not complete:
-        start_capital = insert_input('Insert initial capital', complete, True)
-        annual_investment1 = insert_input('Insert annual investment', complete, True)
-        investment_period1 = insert_input('Insert investment period (Years)', complete, False)
-        average_annual_return = insert_input('Insert average annual return (%)', complete, True)
-        flag = input('Prevision to change after? (Y/N)').upper()
+        start_capital = insert_input('Insert initial capital: ', complete, True)
+        annual_investment1 = insert_input('Insert annual investment: ', complete, True)
+        investment_period1 = insert_input('Insert investment period (Years): ', complete, False)
+        average_annual_return = insert_input('Insert average annual return (%): ', complete, True)
+        flag = input('Prevision to change after? (Y/N): ').upper()
         if (flag == 'Y'):
-            annual_investment2 = insert_input('Insert annual investment (2nd)', complete, True)
-            investment_period2 = insert_input('Insert investment period (Years) (2nd)', complete, False)
+            annual_investment2 = insert_input('Insert annual investment (2nd): ', complete, True)
+            investment_period2 = insert_input('Insert investment period (Years) (2nd): ', complete, False)
         else:
             annual_investment2 = 0
             investment_period2 = 0
@@ -73,4 +73,4 @@ def interesting_calculus():
     
     return report( start_capital, annual_investment1, investment_period1, annual_investment2, investment_period2, average_annual_return )
 
-interesting_calculus()
+print(interesting_calculus())

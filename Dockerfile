@@ -1,7 +1,10 @@
 FROM python:3.9-alpine
 
-RUN pip install "pandas"
+WORKDIR /app
 
-COPY calculus.py /app.py
+COPY requirements.txt .
+COPY calculus.py ./app.py
 
-CMD ["python", "/app.py"]
+RUN pip install -r requirements.txt
+
+CMD ["python", "app.py"]
